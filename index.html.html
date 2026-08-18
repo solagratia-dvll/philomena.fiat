@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>PHILOMENA — Fiat voluntas tua</title>
+
+<meta name="author" content="Victoria León">
+<meta name="description" content="PHILOMENA — Fiat voluntas tua. Archivo de obras de Victoria León.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --white:#f8f7f3;
+    --black:#111111;
+    --gray:#777777;
+    --light:#d8d6d0;
+    --blue:#2457a6;
+    --gold:#a88952;
+
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:"Inter",Arial,sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--white);
+    color:var(--black);
+    font-family:var(--sans);
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img,
+video{
+    max-width:100%;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 5vw;
+
+    background:rgba(248,247,243,.92);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid transparent;
+}
+
+.nav-logo{
+    font-family:var(--serif);
+    font-size:1.4rem;
+    letter-spacing:.15em;
+}
+
+.languages{
+    display:flex;
+    gap:10px;
+}
+
+.languages button{
+    border:0;
+    background:none;
+    cursor:pointer;
+
+    font-size:.65rem;
+    letter-spacing:.15em;
+
+    color:var(--gray);
+}
+
+.languages button:hover,
+.languages button.active{
+    color:var(--blue);
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+.hero{
+    min-height:100svh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:100px 25px;
+
+    border-bottom:1px solid var(--light);
+}
+
+.brand{
+    font-family:var(--serif);
+    font-size:clamp(4rem,12vw,10rem);
+    font-weight:500;
+    letter-spacing:.08em;
+    line-height:.9;
+}
+
+.motto{
+    margin-top:25px;
+
+    font-family:var(--serif);
+    font-style:italic;
+
+    font-size:clamp(1.2rem,2.5vw,2rem);
+
+    color:var(--gray);
+}
+
+.gold-line{
+    width:45px;
+    height:1px;
+
+    background:var(--gold);
+
+    margin:40px auto;
+}
+
+.button{
+    display:inline-block;
+
+    border:1px solid var(--black);
+
+    padding:13px 32px;
+
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+.button:hover{
+    background:var(--blue);
+    color:white;
+    border-color:var(--blue);
+}
+
+.signature{
+    margin-top:50px;
+
+    font-family:var(--serif);
+    font-size:1.2rem;
+}
+
+.signature small{
+    display:block;
+
+    color:var(--gray);
+    font-style:italic;
+
+    margin-top:3px;
+}
+
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+
+.section{
+    padding:120px 7vw;
+}
+
+.center{
+    max-width:760px;
+    margin:auto;
+    text-align:center;
+}
+
+.label{
+    font-size:.68rem;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:30px;
+}
+
+h1{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(3rem,6vw,6rem);
+    line-height:1;
+}
+
+.prologue-text{
+    margin-top:50px;
+
+    font-family:var(--serif);
+    font-size:clamp(1.15rem,2vw,1.5rem);
+    line-height:1.9;
+}
+
+.prologue-text p{
+    margin-bottom:25px;
+}
+
+
+/* =========================
+   ARCHIVO
+========================= */
+
+.archive{
+    max-width:1200px;
+    margin:auto;
+}
+
+.archive-header{
+    text-align:center;
+    margin-bottom:90px;
+}
+
+.archive-subtitle{
+    margin-top:10px;
+
+    font-family:var(--serif);
+    font-style:italic;
+
+    color:var(--gray);
+}
+
+.work{
+    display:grid;
+
+    grid-template-columns:50px 1fr 250px 30px;
+
+    align-items:center;
+
+    gap:25px;
+
+    padding:55px 0;
+
+    border-top:1px solid var(--light);
+
+    transition:.3s;
+}
+
+.work:last-child{
+    border-bottom:1px solid var(--light);
+}
+
+.work:hover{
+    padding-left:15px;
+}
+
+.work-number{
+    font-family:var(--serif);
+    color:var(--gold);
+}
+
+.work-name{
+    font-family:var(--serif);
+    font-size:clamp(2rem,4vw,3.7rem);
+    line-height:1;
+}
+
+.work-description{
+    text-align:right;
+    color:var(--gray);
+    font-size:.75rem;
+}
+
+.arrow{
+    transition:.3s;
+}
+
+.work:hover .arrow{
+    transform:translateX(8px);
+    color:var(--blue);
+}
+
+
+/* =========================
+   PÁGINAS DE OBRA
+========================= */
+
+.work-page{
+    padding-top:140px;
+}
+
+.work-header{
+    text-align:center;
+    padding:50px 25px 90px;
+}
+
+.work-title{
+    font-family:var(--serif);
+    font-size:clamp(3.2rem,8vw,8rem);
+    font-weight:400;
+    line-height:.95;
+}
+
+.work-type{
+    margin-top:20px;
+
+    font-family:var(--serif);
+    font-style:italic;
+
+    color:var(--gray);
+    font-size:1.2rem;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.gallery{
+    max-width:1400px;
+    margin:auto;
+
+    padding:0 5vw 120px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+}
+
+.photo{
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.photo img{
+    width:100%;
+    height:auto;
+
+    display:block;
+
+    transition:transform .7s;
+}
+
+.photo:hover img{
+    transform:scale(1.015);
+}
+
+.photo-wide{
+    grid-column:1 / -1;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-container{
+    max-width:1200px;
+    margin:auto;
+
+    padding:0 5vw 100px;
+}
+
+.video-container video{
+    width:100%;
+    max-height:80vh;
+
+    background:#000;
+
+    display:block;
+}
+
+
+/* =========================
+   PERVASIVE
+========================= */
+
+.text-work{
+    max-width:850px;
+    margin:auto;
+
+    padding:0 25px 120px;
+
+    font-family:var(--serif);
+    font-size:1.25rem;
+    line-height:1.9;
+
+    white-space:pre-wrap;
+}
+
+
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.about{
+    max-width:800px;
+    margin:auto;
+
+    padding:0 25px 120px;
+
+    text-align:center;
+
+    font-family:var(--serif);
+    font-size:1.3rem;
+    line-height:1.9;
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.96);
+
+    z-index:5000;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95vw;
+    max-height:90vh;
+
+    object-fit:contain;
+}
+
+.close{
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    color:white;
+
+    background:none;
+    border:0;
+
+    font-size:35px;
+
+    cursor:pointer;
+}
+
+.prev,
+.next{
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:none;
+    border:0;
+
+    color:white;
+
+    font-size:35px;
+
+    cursor:pointer;
+}
+
+.prev{
+    left:25px;
+}
+
+.next{
+    right:25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid var(--light);
+
+    text-align:center;
+
+    padding:80px 25px 40px;
+
+    color:var(--gray);
+
+    font-size:.7rem;
+}
+
+.footer-brand{
+    font-family:var(--serif);
+    font-size:2rem;
+
+    color:var(--black);
+
+    margin-bottom:15px;
+}
+
+.footer-author{
+    margin-top:10px;
+
+    font-family:var(--serif);
+    color:var(--black);
+
+    font-size:1rem;
+}
+
+.copyright{
+    margin-top:25px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    nav{
+        padding:14px 18px;
+    }
+
+    .brand{
+        font-size:16vw;
+    }
+
+    .section{
+        padding:90px 25px;
+    }
+
+    .work{
+        grid-template-columns:35px 1fr 20px;
+
+        gap:10px;
+
+        padding:35px 0;
+    }
+
+    .work-description{
+        grid-column:2;
+
+        text-align:left;
+
+        margin-top:5px;
+    }
+
+    .arrow{
+        grid-column:3;
+        grid-row:1;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+
+        padding-left:15px;
+        padding-right:15px;
+
+        gap:12px;
+    }
+
+    .photo-wide{
+        grid-column:auto;
+    }
+
+    .work-header{
+        padding-bottom:60px;
+    }
+
+    .work-page{
+        padding-top:100px;
+    }
+
+    .video-container{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+}
+
+@media(min-width:1800px){
+
+    body{
+        font-size:18px;
+    }
+
+    .gallery{
+        max-width:1700px;
+    }
+
+}
+
+
+/* TV / 4K */
+
+@media(min-width:2500px){
+
+    .brand{
+        font-size:10vw;
+    }
+
+    .gallery{
+        max-width:2100px;
+    }
+
+    .work{
+        padding:70px 0;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVEGACIÓN
+===================================================== -->
+
+<nav>
+
+    <a href="#inicio" class="nav-logo">
+        PHILOMENA
+    </a>
+
+    <div class="languages">
+
+        <button class="active" onclick="setLanguage('es')">
+            ES
+        </button>
+
+        <button onclick="setLanguage('en')">
+            EN
+        </button>
+
+        <button onclick="setLanguage('it')">
+            IT
+        </button>
+
+        <button onclick="setLanguage('la')">
+            LA
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     PORTADA
+===================================================== -->
+
+<section class="hero" id="inicio">
+
+    <div>
+
+        <div class="brand">
+            PHILOMENA
+        </div>
+
+        <div class="motto">
+            Fiat voluntas tua
+        </div>
+
+        <div class="gold-line"></div>
+
+        <a href="#prologo" class="button" data-es="Entrar"
+           data-en="Enter"
+           data-it="Entrare"
+           data-la="Ingredere">
+            Entrar
+        </a>
+
+        <div class="signature">
+
+            <span data-es="Por Victoria León"
+                  data-en="By Victoria León"
+                  data-it="Di Victoria León"
+                  data-la="A Victoria León">
+                Por Victoria León
+            </span>
+
+            <small data-es="inspirado en Su Gracia"
+                   data-en="inspired by His Grace"
+                   data-it="ispirato alla Sua Grazia"
+                   data-la="Gratia Sua inspirata">
+                inspirado en Su Gracia
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRÓLOGO
+===================================================== -->
+
+<section class="section" id="prologo">
+
+<div class="center">
+
+<div class="label"
+     data-es="Prólogo"
+     data-en="Prologue"
+     data-it="Prologo"
+     data-la="Prologus">
+    Prólogo
+</div>
+
+<h1
+data-es="Antes de entrar"
+data-en="Before entering"
+data-it="Prima di entrare"
+data-la="Antequam ingrediaris">
+    Antes de entrar
+</h1>
+
+<div class="prologue-text">
+
+<p
+data-es="Toda obra nace de una pregunta."
+data-en="Every work begins with a question."
+data-it="Ogni opera nasce da una domanda."
+data-la="Omne opus ex quaestione nascitur.">
+Toda obra nace de una pregunta.
+</p>
+
+<p
+data-es="Este espacio reúne imágenes, palabras, silencios y fragmentos de una misma búsqueda."
+data-en="This space gathers images, words, silences and fragments of the same search."
+data-it="Questo spazio raccoglie immagini, parole, silenzi e frammenti della stessa ricerca."
+data-la="Hic locus imagines, verba, silentia et fragmenta unius investigationis colligit.">
+Este espacio reúne imágenes, palabras, silencios y fragmentos de una misma búsqueda.
+</p>
+
+<p
+data-es="PHILOMENA es un archivo de obras dedicadas a la contemplación de la persona humana, de su fragilidad, de su belleza y de aquello que permanece cuando todo lo demás desaparece."
+data-en="PHILOMENA is an archive of works devoted to the contemplation of the human person, fragility, beauty and that which remains when everything else disappears."
+data-it="PHILOMENA è un archivio di opere dedicate alla contemplazione della persona umana, della sua fragilità, della sua bellezza e di ciò che rimane quando tutto il resto scompare."
+data-la="PHILOMENA archivum operum est contemplationi personae humanae dicatum, fragilitatis eius, pulchritudinis eius atque eius quod manet cum cetera omnia evanescunt.">
+PHILOMENA es un archivo de obras dedicadas a la contemplación de la persona humana, de su fragilidad, de su belleza y de aquello que permanece cuando todo lo demás desaparece.
+</p>
+
+<p
+data-es="Algunas obras pertenecen a la imagen. Otras pertenecen a la palabra. Todas pertenecen a una misma mirada."
+data-en="Some works belong to image. Others belong to word. All belong to the same gaze."
+data-it="Alcune opere appartengono all'immagine. Altre appartengono alla parola. Tutte appartengono allo stesso sguardo."
+data-la="Quaedam opera imagini, alia verbo pertinent. Omnia eidem visui pertinent.">
+Algunas obras pertenecen a la imagen. Otras pertenecen a la palabra. Todas pertenecen a una misma mirada.
+</p>
+
+<p>
+<em>Fiat voluntas tua.</em>
+</p>
+
+<a href="#archivo"
+   class="button"
+   data-es="Entrar al archivo"
+   data-en="Enter the archive"
+   data-it="Entra nell'archivio"
+   data-la="Ingredere in archivum">
+Entrar al archivo
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ARCHIVO
+===================================================== -->
+
+<section class="section" id="archivo">
+
+<div class="archive">
+
+<header class="archive-header">
+
+<div class="label"
+     data-es="Archivo"
+     data-en="Archive"
+     data-it="Archivio"
+     data-la="Archivum">
+Archivo
+</div>
+
+<h1>
+PHILOMENA
+</h1>
+
+<div class="archive-subtitle">
+Fiat voluntas tua
+</div>
+
+</header>
+
+
+<!-- I -->
+
+<a href="#philomena1" class="work">
+
+<span class="work-number">I</span>
+
+<span class="work-name">
+Philomena I
+</span>
+
+<span class="work-description"
+      data-es="Serie fotográfica"
+      data-en="Photographic series"
+      data-it="Serie fotografica"
+      data-la="Series photographica">
+Serie fotográfica
+</span>
+
+<span class="arrow">→</span>
+
+</a>
+
+
+<!-- II -->
+
+<a href="#philomena2" class="work">
+
+<span class="work-number">II</span>
+
+<span class="work-name">
+Philomena II
+</span>
+
+<span class="work-description"
+      data-es="Serie fotográfica"
+      data-en="Photographic series"
+      data-it="Serie fotografica"
+      data-la="Series photographica">
+Serie fotográfica
+</span>
+
+<span class="arrow">→</span>
+
+</a>
+
+
+<!-- III -->
+
+<a href="#philomena3" class="work">
+
+<span class="work-number">III</span>
+
+<span class="work-name">
+Philomena III
+</span>
+
+<span class="work-description"
+      data-es="Serie fotográfica"
+      data-en="Photographic series"
+      data-it="Serie fotografica"
+      data-la="Series photographica">
+Serie fotográfica
+</span>
+
+<span class="arrow">→</span>
+
+</a>
+
+
+<!-- IV -->
+
+<a href="#sueno" class="work">
+
+<span class="work-number">IV</span>
+
+<span class="work-name"
+      data-es="Eres el sueño más grande de Dios"
+      data-en="You Are God's Greatest Dream"
+      data-it="Sei il sogno più grande di Dio"
+      data-la="Maximum Dei somnium es">
+Eres el sueño más grande de Dios
+</span>
+
+<span class="work-description"
+      data-es="Obra audiovisual"
+      data-en="Audiovisual work"
+      data-it="Opera audiovisiva"
+      data-la="Opus audiovisivum">
+Obra audiovisual
+</span>
+
+<span class="arrow">→</span>
+
+</a>
+
+
+<!-- V -->
+
+<a href="#pervasive" class="work">
+
+<span class="work-number">V</span>
+
+<span class="work-name">
+Pervasive
+</span>
+
+<span class="work-description"
+      data-es="Archivo literario"
+      data-en="Literary archive"
+      data-it="Archivio letterario"
+      data-la="Archivum litterarium">
+Archivo literario
+</span>
+
+<span class="arrow">→</span>
+
+</a>
+
+
+<!-- VI -->
+
+<a href="#sobre-mi" class="work">
+
+<span class="work-number">VI</span>
+
+<span class="work-name"
+      data-es="Sobre mí"
+      data-en="About me"
+      data-it="Su di me"
+      data-la="De me">
+Sobre mí
+</span>
+
+<span class="work-description">
+Victoria
+</span>
+
+<span class="arrow">→</span>
+
+</a>
+
+
+<!-- VII -->
+
+<a href="#cancion" class="work">
+
+<span class="work-number">VII</span>
+
+<span class="work-name">
+Yo también te amo
+</span>
+
+<span class="work-description"
+      data-es="Primera canción"
+      data-en="First song"
+      data-it="Prima canzone"
+      data-la="Prima cantio">
+Primera canción
+</span>
+
+<span class="arrow">→</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PHILOMENA I
+===================================================== -->
+
+<section class="work-page" id="philomena1">
+
+<div class="work-header">
+
+<div class="label">PHILOMENA I</div>
+
+<h1 class="work-title">
+Philomena I
+</h1>
+
+<div class="work-type">
+Serie fotográfica
+</div>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="photo photo-wide">
+<img src="Philomena I - 1.jpg"
+     alt="Philomena I — 1"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Philomena I - 2.jpg"
+     alt="Philomena I — 2"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Philomena I - 3.jpg"
+     alt="Philomena I — 3"
+     onclick="openImage(this)">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PHILOMENA II
+===================================================== -->
+
+<section class="work-page" id="philomena2">
+
+<div class="work-header">
+
+<div class="label">PHILOMENA II</div>
+
+<h1 class="work-title">
+Philomena II
+</h1>
+
+<div class="work-type">
+Serie fotográfica
+</div>
+
+</div>
+
+<div class="gallery">
+
+<div class="photo photo-wide">
+<img src="Philomena II - 1.jpg"
+     alt="Philomena II — 1"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Philomena II - 2.jpg"
+     alt="Philomena II — 2"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Philomena II - 3.jpg"
+     alt="Philomena II — 3"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo photo-wide">
+<img src="Philomena II - 4.jpg"
+     alt="Philomena II — 4"
+     onclick="openImage(this)">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PHILOMENA III
+===================================================== -->
+
+<section class="work-page" id="philomena3">
+
+<div class="work-header">
+
+<div class="label">PHILOMENA III</div>
+
+<h1 class="work-title">
+Philomena III
+</h1>
+
+<div class="work-type">
+Serie fotográfica
+</div>
+
+</div>
+
+<div class="gallery">
+
+<div class="photo">
+<img src="Philomena III - 1.jpg"
+     alt="Philomena III — 1"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Philomena III - 2.jpg"
+     alt="Philomena III — 2"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo photo-wide">
+<img src="Philomena III - 3.jpg"
+     alt="Philomena III — 3"
+     onclick="openImage(this)">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     ERES EL SUEÑO MÁS GRANDE DE DIOS
+===================================================== -->
+
+<section class="work-page" id="sueno">
+
+<div class="work-header">
+
+<div class="label">PHILOMENA IV</div>
+
+<h1 class="work-title"
+    data-es="Eres el sueño más grande de Dios"
+    data-en="You Are God's Greatest Dream"
+    data-it="Sei il sogno più grande di Dio"
+    data-la="Maximum Dei somnium es">
+Eres el sueño más grande de Dios
+</h1>
+
+<div class="work-type">
+Obra audiovisual
+</div>
+
+</div>
+
+<div class="video-container">
+
+<video controls playsinline preload="metadata">
+
+<source src="Eres el sueno más grande de Dios.mov">
+
+Tu navegador no puede reproducir este video.
+
+</video>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PERVASIVE
+===================================================== -->
+
+<section class="work-page" id="pervasive">
+
+<div class="work-header">
+
+<div class="label">PHILOMENA V</div>
+
+<h1 class="work-title">
+Pervasive
+</h1>
+
+<div class="work-type">
+Archivo literario
+</div>
+
+</div>
+
+<div class="text-work" id="pervasiveText">
+Cargando Pervasive...
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SOBRE MÍ
+===================================================== -->
+
+<section class="work-page" id="sobre-mi">
+
+<div class="work-header">
+
+<div class="label">PHILOMENA VI</div>
+
+<h1 class="work-title"
+    data-es="Sobre mí"
+    data-en="About me"
+    data-it="Su di me"
+    data-la="De me">
+Sobre mí
+</h1>
+
+</div>
+
+<div class="about">
+
+<p
+data-es="Este espacio reúne una parte del archivo de Victoria León: imágenes, palabras y proyectos que pertenecen a una misma mirada."
+data-en="This space gathers part of Victoria León's archive: images, words and projects belonging to the same gaze."
+data-it="Questo spazio raccoglie una parte dell'archivio di Victoria León: immagini, parole e progetti appartenenti allo stesso sguardo."
+data-la="Hic locus partem archivi Victoriae León colligit: imagines, verba et incepta eidem visui pertinentia.">
+Este espacio reúne una parte del archivo de Victoria León: imágenes, palabras y proyectos que pertenecen a una misma mirada.
+</p>
+
+<br>
+
+<p>
+<em>Fiat voluntas tua.</em>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     YO TAMBIÉN TE AMO
+===================================================== -->
+
+<section class="work-page" id="cancion">
+
+<div class="work-header">
+
+<div class="label">PHILOMENA VII</div>
+
+<h1 class="work-title">
+Yo también te amo
+</h1>
+
+<div class="work-type"
+     data-es="Primera canción"
+     data-en="First song"
+     data-it="Prima canzone"
+     data-la="Prima cantio">
+Primera canción
+</div>
+
+</div>
+
+
+<div class="video-container">
+
+<video controls playsinline preload="metadata">
+
+<source src="Yo también te amo - Video.mp4"
+        type="video/mp4">
+
+Tu navegador no puede reproducir este video.
+
+</video>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="photo">
+<img src="Yo también te amo - 1.jpg"
+     alt="Yo también te amo — 1"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 2.jpg"
+     alt="Yo también te amo — 2"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 3.jpg"
+     alt="Yo también te amo — 3"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 4.jpg"
+     alt="Yo también te amo — 4"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 5.jpg"
+     alt="Yo también te amo — 5"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 6.jpg"
+     alt="Yo también te amo — 6"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 7.jpg"
+     alt="Yo también te amo — 7"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 8.jpg"
+     alt="Yo también te amo — 8"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 9.jpg"
+     alt="Yo también te amo — 9"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 10.jpg"
+     alt="Yo también te amo — 10"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 11.jpg"
+     alt="Yo también te amo — 11"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 12.jpg"
+     alt="Yo también te amo — 12"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 13.jpg"
+     alt="Yo también te amo — 13"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 14.jpg"
+     alt="Yo también te amo — 14"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 15.jpg"
+     alt="Yo también te amo — 15"
+     onclick="openImage(this)">
+</div>
+
+<div class="photo">
+<img src="Yo también te amo - 16.jpg"
+     alt="Yo también te amo — 16"
+     onclick="openImage(this)">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div class="lightbox" id="lightbox">
+
+<button class="close" onclick="closeImage()">
+×
+</button>
+
+<button class="prev" onclick="previousImage()">
+‹
+</button>
+
+<img id="lightboxImage" src="" alt="">
+
+<button class="next" onclick="nextImage()">
+›
+</button>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-brand">
+PHILOMENA
+</div>
+
+<div>
+Fiat voluntas tua
+</div>
+
+<div class="footer-author">
+Por Victoria León
+</div>
+
+<div>
+inspirado en Su Gracia
+</div>
+
+<div class="copyright">
+© 2026 Victoria León. Todos los derechos reservados.
+</div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   IDIOMAS
+===================================================== */
+
+function setLanguage(language){
+
+    document.documentElement.lang=language;
+
+    document.querySelectorAll("[data-"+language+"]")
+    .forEach(function(element){
+
+        element.textContent=
+            element.getAttribute("data-"+language);
+
+    });
+
+    document.querySelectorAll(".languages button")
+    .forEach(function(button){
+
+        button.classList.remove("active");
+
+    });
+
+    document.querySelector(
+        '.languages button[onclick="setLanguage(\''+
+        language+'\')"]'
+    ).classList.add("active");
+
+    localStorage.setItem(
+        "philomena-language",
+        language
+    );
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+let currentImage=0;
+
+let images=Array.from(
+    document.querySelectorAll(".photo img")
+);
+
+function openImage(image){
+
+    currentImage=images.indexOf(image);
+
+    document
+        .getElementById("lightboxImage")
+        .src=image.src;
+
+    document
+        .getElementById("lightbox")
+        .classList.add("active");
+
+    document.body.style.overflow="hidden";
+}
+
+function closeImage(){
+
+    document
+        .getElementById("lightbox")
+        .classList.remove("active");
+
+    document.body.style.overflow="";
+}
+
+function nextImage(){
+
+    currentImage++;
+
+    if(currentImage>=images.length){
+        currentImage=0;
+    }
+
+    document
+        .getElementById("lightboxImage")
+        .src=images[currentImage].src;
+}
+
+function previousImage(){
+
+    currentImage--;
+
+    if(currentImage<0){
+        currentImage=images.length-1;
+    }
+
+    document
+        .getElementById("lightboxImage")
+        .src=images[currentImage].src;
+}
+
+
+/* =====================================================
+   TECLADO
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            !document
+            .getElementById("lightbox")
+            .classList.contains("active")
+        ){
+            return;
+        }
+
+        if(event.key==="Escape"){
+            closeImage();
+        }
+
+        if(event.key==="ArrowRight"){
+            nextImage();
+        }
+
+        if(event.key==="ArrowLeft"){
+            previousImage();
+        }
+
+    }
+);
+
+
+/* =====================================================
+   CARGAR PERVASIVE
+===================================================== */
+
+fetch("Pervasive by Philomena V. L..txt")
+.then(function(response){
+
+    if(!response.ok){
+        throw new Error("No se encontró Pervasive");
+    }
+
+    return response.text();
+
+})
+.then(function(text){
+
+    document.getElementById(
+        "pervasiveText"
+    ).textContent=text;
+
+})
+.catch(function(){
+
+    document.getElementById(
+        "pervasiveText"
+    ).textContent=
+        "El archivo de Pervasive no pudo cargarse.";
+
+});
+
+
+/* =====================================================
+   IDIOMA GUARDADO
+===================================================== */
+
+const savedLanguage=
+    localStorage.getItem(
+        "philomena-language"
+    );
+
+if(savedLanguage){
+
+    setLanguage(savedLanguage);
+
+}
+
+</script>
+
+</body>
+</html>
